@@ -15,4 +15,4 @@ This project is an AI-powered tool that analyzes company websites and generates 
 
 ```bash
 git clone https://github.com/AmirGadami/BrochureGen
-cd company-brochure-generator
+cd BrochureGen
