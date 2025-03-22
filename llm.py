@@ -138,12 +138,23 @@ def create_brochure(company_name: str, url: str):
         company_name (str): The name of the company.
         url (str): The company website URL.
     """
-    response = openai.chat.completions.create(
+    stream = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": get_brochure_user_prompt(company_name, url)}
         ],
+        stream=True
     )
-    result = response.choices[0].message.content
-    display(Markdown(result))
+    # result = response.choices[0].message.content
+    response = ''
+    for chunk in stream:
+        response = chunk.choices[0].delta.content or ''
+        response = response.replace('```',"").replace('markdown',"")
+        print(response,end='')
+
+
+
+if __name__ == '__main__':
+    create_brochure('CNN',  "https://www.cnn.com")
+
