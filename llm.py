@@ -149,11 +149,13 @@ def create_brochure(company_name: str, url: str):
     # result = response.choices[0].message.content
     response = ''
     for chunk in stream:
-        response = chunk.choices[0].delta.content or ''
-        response = response.replace('```',"").replace('markdown',"")
-        print(response,end='')
+        response += chunk.choices[0].delta.content or ''
+        yield from response
 
 
+
+
+    
 
 if __name__ == '__main__':
     create_brochure('CNN',  "https://www.cnn.com")
