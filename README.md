@@ -19,7 +19,7 @@ cd BrochureGen
 ### 2️⃣ Install Dependencies
 ```bash
 conda env create -f environment.yml
-conda activate brochuregen
+conda activate llms
 ```
 
 ## 🔧 Configuration
@@ -95,5 +95,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## 📞 Contact
-For questions or suggestions, reach out via [your-email@example.com](mailto:your-email@example.com).
+For questions or suggestions, reach out via [ah.ghadami75@gmail.com](mailto:your-email@example.com).
 
