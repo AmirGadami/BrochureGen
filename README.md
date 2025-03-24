@@ -1,54 +1,52 @@
-📄 BrochureGen
+# 📄 BrochureGen
 
 BrochureGen is an AI-powered tool that analyzes company websites and generates a short brochure in markdown format. It extracts relevant information such as company culture, careers, and customer details, making it useful for prospective customers, investors, and recruits.
 
-🚀 Features
+## 🚀 Features
+- **Website Scraping:** Extracts website content, including title, text, and links.
+- **AI-Powered Analysis:** Uses OpenAI's API to generate a structured brochure.
+- **Smart Link Filtering:** Identifies and selects relevant links (e.g., About, Careers pages).
+- **Streaming Output:** Displays AI-generated content dynamically in the terminal.
 
-Website Scraping: Extracts website content, including title, text, and links.
+## 🛠️ Installation
 
-AI-Powered Analysis: Uses OpenAI's API to generate a structured brochure.
-
-Smart Link Filtering: Identifies and selects relevant links (e.g., About, Careers pages).
-
-Streaming Output: Displays AI-generated content dynamically in the terminal.
-
-🛠️ Installation
-
-1️⃣ Clone the Repository
-
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/AmirGadami/BrochureGen.git
 cd BrochureGen
+```
 
-2️⃣ Install Dependencies
-
+### 2️⃣ Install Dependencies
+```bash
 conda env create -f environment.yml
 conda activate brochuregen
+```
 
-🔧 Configuration
+## 🔧 Configuration
+1. **Set up OpenAI API access:**
+   - Add your OpenAI API key to a `.env` or `config.py` file.
+   - Ensure the `MODEL` variable is correctly set.
 
-Set up OpenAI API access:
-
-Add your OpenAI API key to a .env or config.py file.
-
-Ensure the MODEL variable is correctly set.
-
-Modify config.py (if applicable)
-
+2. **Modify `config.py` (if applicable)**
+```python
 MODEL = "gpt-4o-mini"  # Adjust the model as needed
+```
 
-🏃 Usage
+## 🏃 Usage
 
 Run the script and follow the prompts:
-
+```bash
 python main.py
+```
 
-Example Input
-
+### Example Input
+```
 Enter the company Name: CNN
 Enter the company Website: cnn.com
+```
 
-Example Output (Markdown Brochure)
-
+### Example Output (Markdown Brochure)
+```markdown
 ## About Us
 CNN (Cable News Network) is a leading global news organization, delivering breaking news and in-depth analysis across a multitude of topics including politics, business, health, entertainment, science, and climate. Established with a commitment to journalistic integrity, CNN continues to be at the forefront of the news landscape, providing accurate and timely updates worldwide.
 
@@ -71,9 +69,10 @@ Follow CNN on social media or visit our website for the latest updates, subscrib
 
 ### Contact Us
 For inquiries, feedback, or career opportunities, please visit [CNN Careers](https://jobs.cnn.com).
+```
 
-🛠️ Project Structure
-
+## 🛠️ Project Structure
+```
 📂 BrochureGen
 ├── 📜 main.py          # Main script to generate the brochure
 ├── 📜 llm.py           # AI processing and streaming logic
@@ -81,26 +80,20 @@ For inquiries, feedback, or career opportunities, please visit [CNN Careers](htt
 ├── 📜 config.py        # Configuration settings (e.g., API keys, model selection)
 ├── 📜 environment.yml  # Dependencies
 ├── 📜 README.md        # Project documentation
+```
 
-📝 TODO / Future Enhancements
+## 📝 TODO / Future Enhancements
+- ✅ Improve link selection logic for better relevance.
+- ✅ Implement multi-page scraping for more detailed brochures.
+- 🚀 Add support for saving brochures as PDF or HTML.
+- 🚀 Develop a web-based UI for user interaction.
 
-✅ Improve link selection logic for better relevance.
+## 📜 License
+This project is open-source and available under the [MIT License](LICENSE).
 
-✅ Implement multi-page scraping for more detailed brochures.
-
-🚀 Add support for saving brochures as PDF or HTML.
-
-🚀 Develop a web-based UI for user interaction.
-
-📜 License
-
-This project is open-source and available under the MIT License.
-
-🤝 Contributing
-
+## 🤝 Contributing
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-📞 Contact
-
-For questions or suggestions, reach out via your-email@example.com.
+## 📞 Contact
+For questions or suggestions, reach out via [your-email@example.com](mailto:your-email@example.com).
 
