@@ -1,15 +1,18 @@
 from llm import create_brochure
+import gradio as gr
 
 
+app = gr.Interface(
+    fn=create_brochure,
+    inputs=[
+        gr.Textbox(label="Company name:"),
+        gr.Textbox(label="Landing page URL including http:// or https://")],
+    outputs=[gr.Markdown(label="Brochure:")],
+    flagging_mode="never"
+)
 
 
-company_name = input(" Enter the company Name: " ,)
-company_url = input(" Enter the company Website: " )
+# Launch the app
+if __name__ == "__main__":
 
-
-
-if not company_url.startswith('https:'):
-    company_url = "https://"+company_url+'\n\n'
-
-
-create_brochure(company_name,company_url)
+    app.launch(inbrowser=True)

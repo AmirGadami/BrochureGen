@@ -138,6 +138,8 @@ def create_brochure(company_name: str, url: str):
         company_name (str): The name of the company.
         url (str): The company website URL.
     """
+    if url and not url.startswith(('http://', 'https://')):
+        url = 'https://' + url
     stream = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
@@ -150,12 +152,10 @@ def create_brochure(company_name: str, url: str):
     response = ''
     for chunk in stream:
         response += chunk.choices[0].delta.content or ''
-        yield from response
+        # response = response.replace('```markdown', '').replace('```', '')
+        yield response
 
 
-
-
-    
 
 if __name__ == '__main__':
     create_brochure('CNN',  "https://www.cnn.com")
