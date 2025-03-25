@@ -66,6 +66,12 @@ Join us in our mission to inform the world! CNN offers a variety of career oppor
 Follow CNN on social media or visit our website for the latest updates, subscribe to our newsletters, and engage with our diverse range of content. Your feedback is important to us, and we encourage you to connect with us to help improve your experience.
 
 ---
+### Sample Web UI Screenshot
+Here’s how the web interface looks:
+
+![BrochureGen Web UI](sample.png)
+
+---
 
 ### Contact Us
 For inquiries, feedback, or career opportunities, please visit [CNN Careers](https://jobs.cnn.com).
