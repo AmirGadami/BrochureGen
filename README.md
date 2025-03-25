@@ -70,7 +70,10 @@ Follow CNN on social media or visit our website for the latest updates, subscrib
 ### Contact Us
 For inquiries, feedback, or career opportunities, please visit [CNN Careers](https://jobs.cnn.com).
 ```
+### Sample Web UI Screenshot
+Here’s how the web interface looks:
 
+![BrochureGen Web UI](sample.png)
 ## 🛠️ Project Structure
 ```
 📂 BrochureGen
@@ -81,10 +84,6 @@ For inquiries, feedback, or career opportunities, please visit [CNN Careers](htt
 ├── 📜 environment.yml  # Dependencies
 ├── 📜 README.md        # Project documentation
 ```
-### Sample Web UI Screenshot
-Here’s how the web interface looks:
-
-![BrochureGen Web UI](sample.png)
 
 ## 📝 TODO / Future Enhancements
 - ✅ Improve link selection logic for better relevance.
